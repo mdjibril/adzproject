@@ -186,7 +186,7 @@ img {vertical-align: middle;}
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 3</div>
-  <img src="image/house.jpg" style="width:100%">
+  <img src="image/phil-hearing.jpg" style="width:100%">
   <div class="text">Caption Three</div>
 </div>
 
