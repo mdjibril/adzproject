@@ -14,7 +14,8 @@
 
 	if (!$row = $result->fetch_assoc()) {
 		$msg = "Wrong password or Email";
-		// echo "<script>".alert('Wrong password or Email')."</script>";		
+		echo "<script>alert('Wrong password or Email')</script>";
+			
 	}else{
 		$_SESSION['email'] = $row['email'];
 		$_SESSION['adminId'] = $row['adminId'];

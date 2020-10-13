@@ -162,9 +162,9 @@ img {vertical-align: middle;}
 
 <div id="navbar">
   <a class="active" href="index.html">Home</a>
-  <a href="javascript:void(0)">Guest</a>
+  <a href="guest.php">Guest</a>
   <a href="adminlogin.php">Admin</a>
-  <a href="javascript:void(0)">About</a>
+  <a href="about.php">About</a>
 </div>
 
 <div class="content">
