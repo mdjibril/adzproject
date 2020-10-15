@@ -117,6 +117,7 @@ a {
   left: 50%;
   transform: translateX(-50%);
   display: none;
+  opacity: 0.9;
 }
 
 .img-placeholder h4 {
