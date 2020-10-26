@@ -1,5 +1,9 @@
 <?php
   include 'connect~.php';
+
+  $output = "SELECT * FROM housetb";
+  $result = $con->query($output) or die($con->error);
+
   $results = mysqli_query($con, "SELECT * FROM housetb");
   $houseId = mysqli_fetch_all($results, MYSQLI_ASSOC);
 ?>
@@ -10,7 +14,6 @@
 <style>
 body {
   margin: 0;
-  font-size: 28px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -47,6 +50,9 @@ body {
 
 .content {
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sticky {
@@ -58,24 +64,38 @@ body {
 .sticky + .content {
   padding-top: 60px;
 }
+
+.button {
+  text-decoration: none;
+  color: white;
+  background-color: #4caf50;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+td {
+ padding-left: 10px;
+ padding-right: 10px;
+}
+
 </style>
 </head>
 <body>
 
 <div class="header">
-  <img src="image/header.jpg" height="160.2px" style="max-width: 100%">
+  <img src="image/head.jpg" height="160.2px" style="max-width: 100%">
 </div>
 
 <div id="navbar">
   <a class="active" href="index.php">Home</a>
   <a href="guest.php">Guest</a>
-  <a href="adminlogin.php">Admin</a>
+  <a href="adminlogin.php">Login</a>
   <a href="about.php">About</a>
 </div>
 
 <div class="content">
   <h3 style="text-align: center;">Booking Page Guest</h3>
-  <h4>Write about the app here</h4>
   <div style="overflow-x:auto;">
     <table>
       <tr>
@@ -83,20 +103,36 @@ body {
         <th>House</th>
         <th>location</th>
         <th>More Info</th>
-        <th>Book</th>
+        <th>Book space</th>
       </tr>
       <tbody>
+        <?php
+        while ($row = $result->fetch_assoc()){
+          $image = $row['profile_image'];
+          $rent = $row['rent'];
+          $squareft = $row['squareft'];
+          $room = $row['room'];
+          $state = $row['state'];
+          $address = $row['address'];
+          $additionalinfo = $row['additionalinfo'];
+
+          // echo "".$image."";
+          // echo "".$rent."";
+          // echo "<a href='booking.php?images=$image&rents=$rent&squarefts=$squareft&rooms=$room&states=$state&addresss=$address&additionals=$additionalinfo' class='button'>Book space</a>";
+        ?>
         <?php foreach ($houseId as $house): ?>
          <tr>
-          <td><img src="<?php echo 'image/' . $house['profile_image'] ?>" width="90" height="90" alt=""> </td>
-          <td><?php echo $house['rent']; ?> <br><?php echo $house['squareft']; ?> <br><?php echo $house['room']; ?></td>
+          <td><img src="<?php echo 'image/' . $house['profile_image']; ?>" width="90" height="90" alt=""> </td>
+          <td><?php echo $house['rent'];; ?> <br><?php echo $house['squareft']; ?> <br><?php echo $house['room']; ?></td>
           <td><?php echo $house['state']; ?> <br><?php echo $house['address']; ?></td>
           <td><?php echo $house['additionalinfo']; ?></td>
-          <td><button >Book</button></td>
+          <td><?php echo "<a href='booking.php?images=$image&rents=$rent&squarefts=$squareft&rooms=$room&states=$state&addresss=$address&additionals=$additionalinfo' class='button'>Book space</a>"; ?></td>
          </tr>
         <?php endforeach; ?>
+        <?php }?>
       </tbody>
     </table>
+  </div>
 </div>
 
   <br>

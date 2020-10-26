@@ -157,13 +157,13 @@ img {vertical-align: middle;}
 <body>
 
 <div class="header">
-  <img src="image/header.jpg" height="160.2px" style="max-width: 100%">
+  <img src="image/head.jpg" height="160.2px" style="max-width: 100%">
 </div>
 
 <div id="navbar">
   <a class="active" href="index.html">Home</a>
   <a href="guest.php">Guest</a>
-  <a href="adminlogin.php">Admin</a>
+  <a href="adminlogin.php">Login</a>
   <a href="about.php">About</a>
 </div>
 
@@ -184,11 +184,11 @@ img {vertical-align: middle;}
   <div class="text">Caption Two</div>
 </div>
 
-<div class="mySlides fade">
+<!-- <div class="mySlides fade">
   <div class="numbertext">3 / 3</div>
   <img src="image/phil-hearing.jpg" style="width:100%">
   <div class="text">Caption Three</div>
-</div>
+</div> -->
 
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 <a class="next" onclick="plusSlides(1)">&#10095;</a>

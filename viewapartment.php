@@ -45,6 +45,9 @@ body {
   padding: 16px;
   margin-top: 30px;
   height: 1500px; /* Used in this example to enable scrolling */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Add padding to containers */
@@ -83,8 +86,9 @@ table {
 }
 
 th, td {
-  text-align: left;
-  padding: 8px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 tr:nth-child(even){background-color: #f2f2f2}

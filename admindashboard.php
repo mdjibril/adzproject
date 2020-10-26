@@ -39,6 +39,10 @@ body {margin:0;}
   margin-top: 30px;
   height: 1500px; /* Used in this example to enable scrolling */
 }
+.header {
+  padding: 10px;
+  text-align: center;
+}
 </style>
 </head>
 <body>
@@ -51,7 +55,7 @@ body {margin:0;}
 </div>
 
 <div class="main">
-  <h1 style="text-align: center;">Admin Profile</h1>
+  <h1 style="text-align: center;">Profile</h1>
     <div style="overflow-x:auto; text-align: center;">
       <?php
         if((isset($_SESSION['email'])) && !empty($_SESSION['email'])){
@@ -63,14 +67,17 @@ body {margin:0;}
             $fullname = $row1['fullname'];
             $email = $row1['email'];
             $phone = $row1['phone'];
-            echo "<h2>".$fullname."</h2>";
-            echo "<h2>".$email."</h2>";
-            echo "<h2>".$phone."</h2>";
+            echo "<h2> Name:".$fullname."</h2>";
+            echo "<h2> Email: ".$email."</h2>";
+            echo "<h2> Phone:".$phone."</h2>";
           }
         }else {
           echo "";
         }
       ?>
+      <div class="header">
+        <img src="image/head.jpg" height="160.2px" style="max-width: 100%">
+      </div>
     </div>
 </div>
 

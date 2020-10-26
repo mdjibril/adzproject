@@ -21,7 +21,7 @@ $register = mysqli_num_rows(mysqli_query($con, "SELECT * FROM admintb WHERE emai
         }else{
         		
         	$_SESSION['success'] = "Register successfull, login with email and password";
-        	header("Location: admindashboard.php");
+        	header("Location: adminlogin.php");
             // echo "Success";
         }
     	

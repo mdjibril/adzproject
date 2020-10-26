@@ -139,7 +139,7 @@ input[type=submit]:hover {
       <a href="adminsignup.php" style="color:white" class="btn">Sign up</a>
     </div>
     <div class="col">
-      <a href="#" style="color:white" class="btn">Forgot password?</a>
+      <a href="agentlogin.php" style="color:white" class="btn">Agent/Client? Click here</a>
     </div>
   </div>
 </div>

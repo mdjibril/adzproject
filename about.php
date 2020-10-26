@@ -61,13 +61,13 @@ body {
 <body>
 
 <div class="header">
-  <img src="image/header.jpg" height="160.2px" style="max-width: 100%">
+  <img src="image/head.jpg" height="160.2px" style="max-width: 100%">
 </div>
 
 <div id="navbar">
   <a class="active" href="index.html">Home</a>
   <a href="guest.php">Guest</a>
-  <a href="adminlogin.php">Admin</a>
+  <a href="adminlogin.php">Login</a>
   <a href="about.php">About</a>
 </div>
 
@@ -92,27 +92,6 @@ body {
   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <div style="overflow-x:auto;">
-    <table>
-      <tr>
-        <th>Image</th>
-        <th>House</th>
-        <th>location</th>
-        <th>More Info</th>
-        <th>Book</th>
-      </tr>
-      <tbody>
-        <?php foreach ($houseId as $house): ?>
-         <tr>
-          <td><img src="<?php echo 'image/' . $house['profile_image'] ?>" width="90" height="90" alt=""> </td>
-          <td><?php echo $house['rent']; ?>, <br><?php echo $house['squareft']; ?>, <br><?php echo $house['room']; ?></td>
-          <td><?php echo $house['state']; ?>, <?php echo $house['address']; ?></td>
-          <td><?php echo $house['additionalinfo']; ?></td>
-          <td><button >Book</button></td>
-         </tr>
-        <?php endforeach; ?>
-      </tbody>
-    </table>
 </div>
 
   <br>
