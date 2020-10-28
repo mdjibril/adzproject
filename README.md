@@ -24,18 +24,18 @@ before cloning make sure you already have **gitbash** installed you can verify b
 # Setup Database
 1. From the XAMPP software interface Click the *admin button* for MySQL
 or simply type `https://localhost/phpmyadmin` on your browser
-[download xampp!](screenshot/xamppstart.png)
+![download xampp](screenshot/xamppstart.png)
 
 2. On the left navigation panel click on *new* the name of the *db* you are creating is **adzproject**
-[Create DB](screenshot/dbcreate.png)
+![Create DB](screenshot/dbcreate.png)
 
 3. After successfly creating, click on the dbname on the right navigation pane
-[Create Table!](screenshot/tbcreate)
+![Create Table](screenshot/tbcreate.png)
 
 4. inside the project folder you unzipped or you cloned, there is a file named `adzproject.sql` copy the content of the file
 
 5. click on the SQL on the top navbar then paste in the textarea provided, click on **go** at the right bottom of the page 
-[Create Table!](screenshot/tbcreate)
+![Create Table](screenshot/tbcreate.png)
 
 6. After successflly creating you should see the tables under the DB at the right navigation panel
 
